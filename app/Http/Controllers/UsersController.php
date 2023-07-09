@@ -109,8 +109,7 @@ class UsersController extends Controller
         return response()->json($data, $data['code']);
     }
 
-    public function update(Request $request)
-    {
+    public function update(Request $request){
         $json = $request->input('json', null);
         $params = json_decode($json);
         $params_array = json_decode($json, true);

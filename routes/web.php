@@ -22,17 +22,28 @@ Route::get('/', function () {
 });
 
 
-//Metodos Get
+//Metodos Get***********
+//Usuarios
 Route::get('/user', [UsersController::class, 'user']);
+//Posts
 Route::get('/posts', [PostsController::class, 'posts']);
+//Destinos
 Route::get('/destinations', [DestinationsController::class, 'destinations']);
+//Penalizaciones
 Route::get('/penalties', [PenaltiesController::class, 'penalties']);
 
-//Metodos Post
+
+//Metodos Post********************
+//Usuarios
 Route::post('/user-register', [UsersController::class, 'register']);
 Route::post('/user-login', [UsersController::class, 'login']);
 Route::post('/user-update', [UsersController::class, 'update']);
+//Posts
+Route::post('/posts-create', [PostsController::class, 'create']);
+Route::post('/posts-update', [PostsController::class, 'update']);
 
 
-//Metodo Delete
+
+//Metodo Delete*******************
 Route::delete('/user-delete', [UsersController::class, 'delete']);
+Route::delete('/posts-delete', [PostsController::class, 'delete']);
