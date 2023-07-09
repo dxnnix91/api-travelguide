@@ -23,6 +23,7 @@ Route::get('/', function () {
 
 
 //Metodos Get
+Route::get('/user', [UsersController::class, 'user']);
 Route::get('/posts', [PostsController::class, 'posts']);
 Route::get('/destinations', [DestinationsController::class, 'destinations']);
 Route::get('/penalties', [PenaltiesController::class, 'penalties']);
@@ -30,3 +31,8 @@ Route::get('/penalties', [PenaltiesController::class, 'penalties']);
 //Metodos Post
 Route::post('/user-register', [UsersController::class, 'register']);
 Route::post('/user-login', [UsersController::class, 'login']);
+Route::post('/user-update', [UsersController::class, 'update']);
+
+
+//Metodo Delete
+Route::delete('/user-delete', [UsersController::class, 'delete']);
